@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1
+kind: ChartInflator
+metadata:
+  name: kustomize-chart
+  namespace: kustomize-demo
+#repository: file:///go/src/github.com/mgoltzsche/helm-kustomize-plugin/example/localref
+chartHome: base
+releaseName: example
+valueFiles:
+  - base/values.yaml
